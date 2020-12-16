@@ -120,7 +120,7 @@ async function saveDict (jsonDict, target) {
       xml = XML_DECLARATION + xml;
       xml = _.replace(xml, /\n[ ]*\/>/mg, '/>');
       xml = _.replace(xml, /\n[ ]*>/mg, '>');
-      fs.writeFile(target, xml, 'utf-8', (err) => {
+      fs.writeFile(target, xml+'\n', 'utf-8', (err) => {
         if (err) {
           reject(err);
         } else {
