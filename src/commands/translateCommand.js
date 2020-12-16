@@ -16,7 +16,8 @@ async function translateCommand (source, target, options) {
     const CurrentTranslationService = TranslateServiceFactory(options.service);
     const translationService = new CurrentTranslationService(apiKey);
     const translateDictionaryService = new TranslateDictionaryService(translationService, {
-      keys: options.keys
+      keys: options.keys,
+      email: options.email || ''
     });
 
     let translatedDict = await translateDictionaryService.translate(sourceDict, targetDict);

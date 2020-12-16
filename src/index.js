@@ -46,6 +46,7 @@ program
   .option('--service <service>', 'Translation Service, Yandex default')
   .option('--apiKey <key>', 'Translation Service API Key')
   .option('--keys <key>', 'A comma separated list of dictionaries keys. I.e. --keys=key1,key2,key3')
+  .option('--email <email>', 'Adds an email address to query')
   .action(translateCommand);
 
 program
@@ -55,6 +56,7 @@ program
   .option('--service <service>', 'Translation Service, Yandex default')
   .option('--apiKey <key>', 'Translation Service API Key')
   .option('--keys <key>', 'A comma separated list of dictionaries keys. I.e. --keys=key1,key2,key3')
+  .option('--email <email>', 'Adds an email address to query')
   .action(translateBatchCommand);
 
 program

@@ -36,7 +36,7 @@ class TranslateDictionaryService {
       for (const key of keysToTranslate) {
         try {
           const value = sourceEntries[key]['_attributes']['sling:message'];
-          targetDictionary['jcr:root'][key] = await this.translateService.translate(key, value, sourceLang, targetLang);
+          targetDictionary['jcr:root'][key] = await this.translateService.translate(key, value, sourceLang, targetLang, this.options);
         } catch (e) {
           reject(e);
         }
